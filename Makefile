@@ -1,6 +1,6 @@
 .PHONY: init
 init:
-	docker-machine create --driver xhyve --xhyve-virtio-9p 1 --xhyve-virtio-9p-root "/" dev
+	docker-machine create --driver xhyve --xhyve-virtio-9p /Users/gnawhleinad --xhyve-virtio-9p-root / dev
 
 .PHONY: clean
 clean:
