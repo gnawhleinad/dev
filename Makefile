@@ -1,8 +1,9 @@
 .PHONY: init
 init:
-	docker-machine create --driver xhyve --xhyve-virtio-9p --xhyve-virtio-9p-root="/" dev
+	docker-machine create --driver xhyve --xhyve-virtio-9p 1 --xhyve-virtio-9p-root "/" dev
 
 .PHONY: clean
 clean:
-	docker-machine kill dev
+	docker-machine stop dev
+	docker-machine kill dev 2>/dev/null || true
 	docker-machine rm --force dev
