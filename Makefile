@@ -18,7 +18,7 @@ init: iso
 .PHONY: start
 start:
 	docker-machine start dev
-	eval $(docker-machine env dev)
+
 
 .PHONY: clean
 clean:
