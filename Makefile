@@ -19,6 +19,12 @@ init: iso
 start:
 	docker-machine start dev
 
+build: Dockerfile
+	docker build --tag dev:0.0.1 .
+
+.PHONY: run
+run:
+	docker run -t -i dev:0.0.1 /bin/bash
 
 .PHONY: clean
 clean:
